@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AppWeb</title>
-</head>
-<body>
-    
-    <h1>Proyecto Final {{ app_name }}</h1>
-    <h2>CLIENTE</h2>
-    <h3>Cliente: lista</h3>
+{% extends 'core/base.html' %}
+
+{% block title %}
+    | Cliente
+{% endblock title %}
+
+{% block content_title %}
+    CLIENTE
+{% endblock content_title %}
+
+{% block content %} 
+    <h2>Cliente: lista</h2>
 
     <table border="1">
         <thead>
@@ -29,5 +29,4 @@
     <button><a href="{% url 'cliente:index' %}">Cliente</a></button>
     <button><a href="{% url 'core:index' %}">Inicio</a></button>
 
-</body>
-</html>
+{% endblock content %}

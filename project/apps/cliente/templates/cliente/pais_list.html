@@ -1,24 +1,24 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AppWeb</title>
-</head>
-<body>
+{% extends 'core/base.html' %}
+
+{% block title %}
+    | Cliente
+{% endblock title %}
+
+{% block content_title %}
+    CLIENTE
+{% endblock content_title %}
+
+{% block content %} 
     
-    <h1>Proyecto Final {{ app_name }}</h1>
-    <h2>CLIENTE</h2>
-    <h3>Países: lista</h3>
+    <h2>Países: lista</h2>
 
     <ul>
         {% for pais in paises %}
             <li>{{ pais.nombre }}</li>
         {% endfor %}
     </ul>
-
+    
     <button><a href="{% url 'cliente:index' %}">Cliente</a></button>
     <button><a href="{% url 'core:index' %}">Inicio</a></button>
 
-</body>
-</html>
+{% endblock content %}
